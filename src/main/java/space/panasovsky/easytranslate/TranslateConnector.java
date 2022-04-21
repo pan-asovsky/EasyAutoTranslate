@@ -34,7 +34,7 @@ public class TranslateConnector {
                 .uri(URI.create("https://microsoft-translator-text.p.rapidapi.com/translate?api-version=3.0&to%5B0%5D=ru&suggestedFrom=en&textType=plain&profanityAction=NoAction"))
                 .header("content-type", "application/json")
                 .header("X-RapidAPI-Host", "microsoft-translator-text.p.rapidapi.com")
-                .header("X-RapidAPI-Key", "185f850fe2msh03d7cedb7815596p1050dbjsne3ab833d8867")
+                .header("X-RapidAPI-Key", System.getenv("key"))
                 .method("POST", HttpRequest.BodyPublishers.ofString("[{\"Text\": \"" + text + "\"}]"))
                 .build();
 
